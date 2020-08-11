@@ -10,7 +10,7 @@ import { ICustomer, IOrder } from '../shared/interfaces';
 @Injectable()
 export class DataService {
 
-    baseUrl: string = 'assets/'; // Local set Up JSON 
+    baseUrl: string = 'assets/'; // Local HTTP server set Up
 
     customerMockAPI_url : string = "https://5f325d35ec83300016137147.mockapi.io/customers";
     

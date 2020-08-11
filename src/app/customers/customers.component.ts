@@ -14,11 +14,16 @@ export class CustomersComponent implements OnInit {
   people: ICustomer[];
   
   //Injecting the service through the constructor
-  constructor(private dataService : DataService) { }
+  constructor(private dataService : DataService,
+              private spinnerService: NgxSpinnerService) { }
 
   ngOnInit(): void {
-    this.title = 'Predictive Customers Search';    
+    this.spinnerService.show()
+    this.title = 'Predictive Customers Search';        
     this.dataService.getCustomers()
-        .subscribe((customers : ICustomer[]) => this.people = customers);    
+        .subscribe((customers : ICustomer[]) => { // Since the HTTP call return type is observable, we subscribe
+          this.people = customers;
+          this.spinnerService.hide(); 
+        }); 
   }
 }

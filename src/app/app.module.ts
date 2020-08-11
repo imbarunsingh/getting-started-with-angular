@@ -22,7 +22,6 @@ import { NgxSpinnerModule } from "ngx-spinner";
     AppRoutingModule],
 
   declarations: [AppComponent],
-  
   bootstrap: [AppComponent]
 })
 export class AppModule { }

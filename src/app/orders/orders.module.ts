@@ -6,11 +6,10 @@ import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
 import { OrdersComponent } from './orders.component';
 import { OrdersRoutingModule } from './orders-routing.module';
-import { NgxSpinnerModule } from 'ngx-spinner';
 
 
 @NgModule({
-    imports: [ CommonModule, FormsModule, SharedModule, OrdersRoutingModule, NgxSpinnerModule],
+    imports: [ CommonModule, FormsModule, SharedModule, OrdersRoutingModule],
     declarations: [ OrdersComponent ]
 })
 export class OrdersModule { }
